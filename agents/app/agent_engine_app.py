@@ -35,6 +35,8 @@ from app.utils.typing import Feedback
 from vertexai.preview.reasoning_engines import AdkApp
 
 
+GOOGLE_CLOUD_PROJECT = os.environ.get("GOOGLE_CLOUD_PROJECT")
+
 class AgentEngineApp(AdkApp):
     def set_up(self) -> None:
         """Set up logging and tracing for the agent engine app."""
@@ -44,7 +46,7 @@ class AgentEngineApp(AdkApp):
         provider = TracerProvider()
         processor = export.BatchSpanProcessor(
             CloudTraceLoggingSpanExporter(
-                project_id=os.environ.get("GOOGLE_CLOUD_PROJECT")
+                project_id=GOOGLE_CLOUD_PROJECT
             )
         )
         provider.add_span_processor(processor)
@@ -184,7 +186,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Deploy agent engine app to Vertex AI")
     parser.add_argument(
         "--project",
-        default="pokedemo-test",
+        default=GOOGLE_CLOUD_PROJECT,
         help="GCP project ID (defaults to application default credentials)",
     )
     parser.add_argument(
