@@ -6,9 +6,10 @@ from dotenv import load_dotenv
 load_dotenv()
 BASE_URL = os.environ.get("INSTAVIBE_BASE_URL")
 
-#REPLACE ME CREAT POST
+#REPLACE ME CREATE POST
 
-#REPLACE ME CREAT EVENT
+#REPLACE ME CREATE EVENTS
+
 
 
 
