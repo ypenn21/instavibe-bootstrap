@@ -13,3 +13,15 @@ from typing import Optional
 
 # Get a logger instance
 log = logging.getLogger(__name__)
+
+#REPLACE FOR CheckCondition
+
+#REPLACE FOR profile_agent
+
+#REPLACE FOR summary_agent
+
+#REPLACE FOR check_agent
+
+#REPLACE FOR modify_output_after_agent
+
+#REPLACE FOR root_agent
