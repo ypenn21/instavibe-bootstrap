@@ -1,8 +1,7 @@
-# /Users/linchr/Desktop/work/datecoach/agents/social/requirements.txt
-google-cloud-spanner
-google-generativeai
-google-adk
-python-dotenv
-fastapi 
-uvicorn
+google-cloud-spanner==3.54.0
+google-genai==1.14.0
+google-adk==0.4.0
+python-dotenv==1.1.0
+fastapi==0.115.12
+urllib3==2.4.0
 a2a_common-0.1.0-py3-none-any.whl
