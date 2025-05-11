@@ -8,13 +8,13 @@ WORKDIR /app
 
 # --- Dependency Installation ---
 # Copy only the requirements file first to leverage Docker cache
-COPY ./agents/planner/requirements.txt /app/requirements.txt
-COPY ./agents/a2a_common-0.1.0-py3-none-any.whl /app/a2a_common-0.1.0-py3-none-any.whl
+COPY ./planner/requirements.txt /app/requirements.txt
+COPY ./a2a_common-0.1.0-py3-none-any.whl /app/a2a_common-0.1.0-py3-none-any.whl
 RUN pip install --no-cache-dir -r requirements.txt
 
 
 # --- Application Code ---
-COPY ./agents/planner /app/agents/planner
+COPY ./planner /app/agents/planner
 
 # --- Environment ---
 ENV PYTHONPATH=/app/agents 
