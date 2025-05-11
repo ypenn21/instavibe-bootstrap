@@ -8,14 +8,13 @@ WORKDIR /app
 
 # --- Dependency Installation ---
 # Copy only the requirements file first to leverage Docker cache
-COPY ./agents/social/requirements.txt /app/requirements.txt
-COPY ./agents/a2a_common-0.1.0-py3-none-any.whl /app/a2a_common-0.1.0-py3-none-any.whl
+COPY ./social/requirements.txt /app/requirements.txt
+COPY ./a2a_common-0.1.0-py3-none-any.whl /app/a2a_common-0.1.0-py3-none-any.whl
 RUN pip install --no-cache-dir -r requirements.txt
 
 
 # --- Application Code ---
-COPY ./agents/social /app/agents/social
-COPY ./agents/social/.env /app/agents/social/.env
+COPY ./social /app/agents/social
 
 # --- Environment ---
 ENV PYTHONPATH=/app/agents 
