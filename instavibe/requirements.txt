@@ -1,5 +1,4 @@
 google-cloud-aiplatform[adk,agent_engines]==1.91.0
 Flask==3.1.0
 google-cloud-spanner==3.54.0
-humanize
 humanize==4.12.3
