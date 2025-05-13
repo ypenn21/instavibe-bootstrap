@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div id="planLoadingState" class="alert alert-info">
-                <p><i class="fas fa-spinner fa-spin"></i> Your personalized plan is being generated. Please wait...</p>
+                <p><i class="fas fa-spinner fa-spin"></i> Your personalized plan is being generated. Please wait<img src="{{ url_for('static', filename='loading.gif') }}" alt="Loading Spinner" style="width:40px;"/></p>
                 <p>You'll see the agent's process on the right as it works.</p>
             </div>
             <div id="planErrorState" class="alert alert-danger" style="display: none;">
