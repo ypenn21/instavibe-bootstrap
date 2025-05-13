@@ -23,7 +23,7 @@ exit_stack: AsyncExitStack | None = None
 
 
 async def get_tools_async():
-  #REPLACE ME - TOOLS
+  #REPLACE ME - FETCH TOOLS
 
   return tools, exit_stack
  
