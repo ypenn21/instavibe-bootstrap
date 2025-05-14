@@ -9,6 +9,7 @@ PROJECT_FILE="~/project_id.txt"
 SPANNER_INSTANCE_ID="instavibe-graph-instance"
 SPANNER_DATABASE_ID="graphdb"
 GOOGLE_CLOUD_LOCATION="us-central1"
+REPO_NAME="introveally-repo"
 # ---------------------
 
 echo "--- Setting Google Cloud Environment Variables ---"
@@ -80,8 +81,11 @@ export GOOGLE_GENAI_USE_VERTEXAI="TRUE"
 echo "Exported GOOGLE_GENAI_USE_VERTEXAI=$GOOGLE_GENAI_USE_VERTEXAI"
 
 # 10. Export GOOGLE_CLOUD_LOCATION
-# Use the variable defined in the configuration section
 export GOOGLE_CLOUD_LOCATION="$GOOGLE_CLOUD_LOCATION"
 echo "Exported GOOGLE_CLOUD_LOCATION=$GOOGLE_CLOUD_LOCATION"
+
+# 10. Export REPO_NAME
+export REPO_NAME="$REPO_NAME"
+echo "Exported REPO_NAME=$REPO_NAME"
 
 echo "--- Environment setup complete ---"
