@@ -30,10 +30,6 @@ else
 fi
 # --- --- --- --- --- ---
 
-# --- Error Handling for subsequent commands ---
-# Exit immediately if a command exits with a non-zero status from this point forward.
-set -e
-# --- --- --- --- --- ---
 
 # 1. Check if project file exists
 PROJECT_FILE_PATH=$(eval echo $PROJECT_FILE) # Expand potential ~
