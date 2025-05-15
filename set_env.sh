@@ -10,6 +10,7 @@ SPANNER_INSTANCE_ID="instavibe-graph-instance"
 SPANNER_DATABASE_ID="graphdb"
 GOOGLE_CLOUD_LOCATION="us-central1"
 REPO_NAME="introveally-repo"
+MAPKEY_FILE="~/mapkey.txt"
 # ---------------------
 
 echo "--- Setting Google Cloud Environment Variables ---"
@@ -88,9 +89,26 @@ echo "Exported GOOGLE_CLOUD_LOCATION=$GOOGLE_CLOUD_LOCATION"
 export REPO_NAME="$REPO_NAME"
 echo "Exported REPO_NAME=$REPO_NAME"
 
-# 12. Export REPO_NAME
+# 12. Export REGION
 export REGION="$GOOGLE_CLOUD_LOCATION"
 echo "Exported REGION=$GOOGLE_CLOUD_LOCATION"
 
+# 13. Check for and set GOOGLE_MAPS_API_KEY from mapkey.txt
+MAPKEY_FILE_PATH=$(eval echo $MAPKEY_FILE)
+if [ -f "$MAPKEY_FILE_PATH" ]; then
+  # File exists
+  if [ -s "$MAPKEY_FILE_PATH" ]; then
+    # File is not empty
+    export GOOGLE_MAPS_API_KEY=$(cat "$MAPKEY_FILE_PATH")
+    echo "Exported GOOGLE_MAPS_API_KEY from $MAPKEY_FILE_PATH"
+  else
+    # File is empty
+    echo "Warning: $MAPKEY_FILE_PATH exists but is empty.  GOOGLE_MAPS_API_KEY will not be set."
+    echo "Check your key name must be \"Maps Platform API Key\" and rerun 1st section of step 5."
+  fi
+else
+  # File does not exist
+  echo "Skipping GOOGLE_MAPS_API_KEY. $MAPKEY_FILE_PATH not found."
+fi
 
 echo "--- Environment setup complete ---"
