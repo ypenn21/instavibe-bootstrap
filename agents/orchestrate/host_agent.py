@@ -59,11 +59,11 @@ class HostAgent:
       agent_info.append(json.dumps(ra))
     self.agents = '\n'.join(agent_info)
 
-  #REPLACE ME REG AGENT CARD
+#REPLACE ME REG AGENT CARD
 
-  #REPLACE ME CREATE AGENT
+#REPLACE ME CREATE AGENT
 
-  #REPLACE ME INSTRUCTIONS
+#REPLACE ME INSTRUCTIONS
 
   
   def check_state(self, context: ReadonlyContext):
