@@ -103,8 +103,14 @@ if [ -f "$MAPKEY_FILE_PATH" ]; then
     echo "Exported GOOGLE_MAPS_API_KEY from $MAPKEY_FILE_PATH"
   else
     # File is empty
-    echo "Warning: $MAPKEY_FILE_PATH exists but is empty.  GOOGLE_MAPS_API_KEY will not be set."
+    echo "WARNING!!WARNING!!WARNING!!WARNING!!WARNING!!WARNING!!WARNING!!WARNING!!"
+    echo "------------------GOOGLE_MAPS_API_KEY will not be set.-------------------"
+    echo "-------------------------------------------------------------------------"
+    echo ""
     echo "Check your key name must be \"Maps Platform API Key\" and rerun 1st section of step 5."
+    echo ""
+    echo "-------------------------------------------------------------------------"
+    echo "WARNING!!WARNING!!WARNING!!WARNING!!WARNING!!WARNING!!WARNING!!WARNING!!"
   fi
 fi
 
